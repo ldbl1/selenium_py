@@ -1,0 +1,9 @@
+{
+    "Instagram":{
+        "username":"John",
+        "password":"1234"
+    },
+    "TestJson":{
+        "Test":"Hola"
+    }
+}
