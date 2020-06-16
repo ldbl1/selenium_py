@@ -31,13 +31,25 @@ XPentrar = configuracion['Elementos']['XPentrar']
 driver.find_element_by_xpath(XPentrar).submit()
 time.sleep(5)
 #Voy al primer usuario
-driver.get("https://www.instagram.com/" + configuracion['Usuarios']['0'])
-XPUltimaFoto = configuracion['Elementos']['XPUltimaFoto']
-driver.find_element_by_xpath(XPUltimaFoto).click()
-XPComentario = configuracion['Elementos']['XPComentario']
-driver.find_element_by_xpath(XPComentario).click()
-driver.find_element_by_xpath(XPComentario).send_keys(configuracion['Mensajes']['0'])
-XPBotonPublicar = configuracion['Elementos']['XPBotonPublicar']
-driver.find_element_by_xpath(XPBotonPublicar).click()
-time.sleep(10)
+#cargo los mensajes en un array
+mensajes = configuracion['Mensajes'].values()
+lista_mensajes = []
+for mensaje in mensajes:
+    lista_mensajes.append(mensaje)
+print(lista_mensajes)
+#lista_mensajes contiene todos los mensajes posibles configurados
+usuarios = configuracion['Usuarios'].values()
+lista_usuarios = []
+for usuario in usuarios:
+
+    driver.get("https://www.instagram.com/" + usuario)
+    XPUltimaFoto = configuracion['Elementos']['XPUltimaFoto']
+    driver.find_element_by_xpath(XPUltimaFoto).click()
+    XPComentario = configuracion['Elementos']['XPComentario']
+    driver.find_element_by_xpath(XPComentario).click()
+    driver.find_element_by_xpath(XPComentario).send_keys(configuracion['Mensajes']['0'])
+    XPBotonPublicar = configuracion['Elementos']['XPBotonPublicar']
+    #driver.find_element_by_xpath(XPBotonPublicar).click()
+    time.sleep(10)
+
 driver.close()
