@@ -47,7 +47,8 @@ for usuario in usuarios:
     driver.find_element_by_xpath(XPUltimaFoto).click()
     XPComentario = configuracion['Elementos']['XPComentario']
     driver.find_element_by_xpath(XPComentario).click()
-    driver.find_element_by_xpath(XPComentario).send_keys(configuracion['Mensajes']['0'])
+    mensaje_aleatorio = random.choice(lista_mensajes)
+    driver.find_element_by_xpath(XPComentario).send_keys(mensaje_aleatorio)
     XPBotonPublicar = configuracion['Elementos']['XPBotonPublicar']
     #driver.find_element_by_xpath(XPBotonPublicar).click()
     time.sleep(10)
