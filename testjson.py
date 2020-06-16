@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import json
 import random
 
@@ -7,13 +9,13 @@ with open('selenium_py/configuracion.json','r') as fichero_config:
 configuracion = json.loads(config)
 print(configuracion['Mensajes'])
 mensajes = configuracion['Mensajes'].values()
-print(mensajes.values())
+print(mensajes)
+lista_mensajes = []
 
 for mensaje in mensajes:
-    print(mensaje)
+    lista_mensajes.append(mensaje)
 
+print(lista_mensajes)
 
-movie_list = ['The Godfather', 'The Wizard of Oz', 'Citizen Kane', 'The Shawshank Redemption', 'Pulp Fiction']
-
-moview_item = random.choice(movie_list)
-print ("Randomly selected item from list is - ", moview_item)
+mensaje_aleatorio = random.choice(lista_mensajes)
+print ("Mensaje aleatorio ->", mensaje_aleatorio)
