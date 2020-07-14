@@ -1,32 +1,32 @@
 {
-    "Instagram":{
+    "instragram":{
         "username":"John",
         "password":"1234"
     },
-    "TestJson":{
+    "test_json":{
         "Test":"Hola"
     },
-    "Mensajes":{
+    "mensajes":{
         "0":"Que bueno!",
         "1":"Me encanta!",
         "2":"Ojala saber hacer fotos asi",
         "3":"Me encantaria hacer una colaboracion contigo!"
     },
-    "Elementos":{
-        "XPusuario":"//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/label/input",
-        "XPcontrasena":"//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[3]/div/label/input",
-        "XPentrar":"//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[4]/button/div",
-        "XPAhoraNo1":"//*[@id=\"react-root\"]/section/main/div/div/div/div/button",
-        "XPAhoraNo2":"/html/body/div[4]/div/div/div[3]/button[2]",
-        "XPUltimaFoto":"//*[@id=\"react-root\"]/section/main/div/div[2]/article/div/div/div[1]/div[1]/a/div/div[2]",
-        "XPComentario":"/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea",
-        "XPBotonPublicar":"/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/button"
+    "elementos":{
+        "xp_usuario":"//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[2]/div/label/input",
+        "xp_contrasena":"//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[3]/div/label/input",
+        "xp_entrar":"//*[@id=\"react-root\"]/section/main/article/div[2]/div[1]/div/form/div[4]/button/div",
+        "xp_ahora_no1":"//*[@id=\"react-root\"]/section/main/div/div/div/div/button",
+        "zp_ahora_no2":"/html/body/div[4]/div/div/div[3]/button[2]",
+        "zp_ultima_foto":"//*[@id=\"react-root\"]/section/main/div/div[2]/article/div/div/div[1]/div[1]/a/div/div[2]",
+        "xp_comentario":"/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/textarea",
+        "xp_boton_publicar":"/html/body/div[4]/div[2]/div/article/div[2]/section[3]/div/form/button"
         
     },
-    "Configuracion":{
+    "configuracion":{
         "implicitly_wait":10
     },
-    "Usuarios":{
+    "usuarios":{
         "0":"John_Smith",
         "2":"test",
         "3":"test_imagenes__"

@@ -22,35 +22,35 @@ driver.maximize_window()
 #defino la espera estandar en segs
 wait = WebDriverWait(driver, 3)
 #recupero valor de username y lo introduzco
-XPusuario = configuracion['Elementos']['XPusuario']
-driver.find_element_by_xpath(XPusuario).send_keys(configuracion['Instagram']['username'])
+xp_usuario = configuracion['elementos']['xp_usuario']
+driver.find_element_by_xpath(xp_usuario).send_keys(configuracion['instragram']['username'])
 #recupero valor de password y lo introduzco
-XPcontrasena = configuracion['Elementos']['XPcontrasena']
-driver.find_element_by_xpath(XPcontrasena).send_keys(configuracion['Instagram']['password'])
+xp_contrasena = configuracion['elementos']['xp_contrasena']
+driver.find_element_by_xpath(xp_contrasena).send_keys(configuracion['instragram']['password'])
 #busco el boton de entrar y lo pulso
-XPentrar = configuracion['Elementos']['XPentrar']
-driver.find_element_by_xpath(XPentrar).submit()
+xp_entrar = configuracion['elementos']['xp_entrar']
+driver.find_element_by_xpath(xp_entrar).submit()
 time.sleep(5)
 #Voy al primer usuario
 #cargo los mensajes en un array
-mensajes = configuracion['Mensajes'].values()
+mensajes = configuracion['mensajes'].values()
 lista_mensajes = []
 for mensaje in mensajes:
     lista_mensajes.append(mensaje)
 print(lista_mensajes)
 #lista_mensajes contiene todos los mensajes posibles configurados
-usuarios = configuracion['Usuarios'].values()
+usuarios = configuracion['usuarios'].values()
 lista_usuarios = []
 for usuario in usuarios:
 
     driver.get("https://www.instagram.com/" + usuario)
-    XPUltimaFoto = configuracion['Elementos']['XPUltimaFoto']
-    driver.find_element_by_xpath(XPUltimaFoto).click()
-    XPComentario = configuracion['Elementos']['XPComentario']
-    driver.find_element_by_xpath(XPComentario).click()
+    xp_ultima_foto = configuracion['elementos']['xp_ultima_foto']
+    driver.find_element_by_xpath(xp_ultima_foto).click()
+    xp_comentario = configuracion['elementos']['xp_comentario']
+    driver.find_element_by_xpath(xp_comentario).click()
     mensaje_aleatorio = random.choice(lista_mensajes)
-    driver.find_element_by_xpath(XPComentario).send_keys(mensaje_aleatorio)
-    XPBotonPublicar = configuracion['Elementos']['XPBotonPublicar']
+    driver.find_element_by_xpath(xp_comentario).send_keys(mensaje_aleatorio)
+    xp_boton_publicar = configuracion['elementos']['xp_boton_publicar']
     #driver.find_element_by_xpath(XPBotonPublicar).click()
     time.sleep(10)
 
